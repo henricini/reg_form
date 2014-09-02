@@ -1,0 +1,19 @@
+<%= link_to "Click to create new information", new_form_path %> <br/><hr><hr>
+
+<%= @forms.each do |form| %>
+	Firstname: <%= form.firstname %><br/><br/>
+	Lastname: <%= form.lastname %><br/><br/>
+	Gender: <%= form.gender %><br/><br/>
+	Address: <%= form.address %><br/><br/>
+	E-mail: <%= form.email %><br/><br/>
+	Country: <%= form.country %><br/><br/>
+	State: <%= form.state %><br/><br/>
+	Goal: <%= form.goal %><br/><br/>
+
+	<%= link_to "Remove Information", form_path(form), :data=>{:confirm=>"You sure say you wan clear every every ?"}, :method=> :delete %>
+
+	
+	<br/><hr><hr>
+
+
+<% end %>

@@ -1,0 +1,47 @@
+<%= form_for @form do |f| %>
+
+<p>
+<%= f.label :firstname %>
+<%= f.text_field :firstname %>
+<p>
+
+<p>
+<%= f.label :lastname %>
+<%= f.text_field :lastname %>
+<p>
+
+<p>
+<%= f.label :gender %>
+<%= f.radio_button :gender, 'Male', :checked => true %>Male
+<%= f.radio_button :gender, 'Female' %>Female
+<p>
+
+<p>
+<%= f.label :address %>
+<%= f.text_area :address, :cols => "45", :rows =>"3" %>
+<p>
+
+<p>
+<%= f.label :email %>
+<%= f.text_field :email %>
+<p>
+
+<p>
+<%= f.label :country %>
+<%= f.select :country,["Benin",
+"Burkina-Faso","Cape-Verde-Island","Ivory-Coast","Gambia","Ghana","Guinea","Guine-Bissau","Liberia","Mali","Mauritania","Niger","Nigeria","Senegal","Sierra-Leone","Togo","other"] %>
+<p>
+
+<p>
+<%= f.label :state %>
+<%= f.select :state,["Bayelsa","Akwa-Ibom","Cross-River","Edo","Delta","Other"] %>
+<p>
+
+<p>
+<%= f.label :goal %>
+<%= f.text_area :goal, :cols => "50", :rows => "5" %>
+<p>
+
+<%= f.submit "Submit" %>
+<% end %>
+<hr><hr>
